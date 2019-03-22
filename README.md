@@ -20,7 +20,13 @@ pip install -r requirements.txt
 Contributors / Licensing
 ========================
 
-Generally everything is LICENSE'D under the Apache 2 license by Abram Hindle.
+Generally everything is LICENSE'D under the Apache 2 license by Abram Hindle and Matthew Kluk.
+
+In addition, extensive work on implementing websockets client-side was taken from chat.py, written by Hazel Victoria Campbell, found in the cmput404-slides WebSocketsExamples, licensed under the Apache License.
+
+https://github.com/uofa-cmput404/cmput404-slides/tree/master/examples/WebSocketsExamples
+
+Matthew Kluk also talked to Jacob Blazusiak about the best ways of implementing Websockets into the drawing app.
 
 freetests.py is LICENSE'D under a BSD-like license:
 
