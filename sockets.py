@@ -69,12 +69,23 @@ myWorld.add_set_listener( set_listener )
 @app.route('/')
 def hello():
     '''Return something coherent here.. perhaps redirect to /static/index.html '''
-    return None
+    return flask.redirect("/static/index.html")
 
 def read_ws(ws,client):
     '''A greenlet function that reads from the websocket and updates the world'''
-    # XXX: TODO IMPLEMENT ME
-    return None
+    # adapted from Hazel's chat.py example:
+    # https://github.com/uofa-cmput404/cmput404-slides/blob/master/examples/WebSocketsExamples/chat.py
+    try:
+        while True:
+            message = ws.receive()
+            if (message is not None):
+                packet = json.loads(msg)
+                # TODO send_all_json( packet ) 
+            else:
+                break
+    except:
+        pass
+                
 
 @sockets.route('/subscribe')
 def subscribe_socket(ws):
